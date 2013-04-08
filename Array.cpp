@@ -3,7 +3,6 @@
 template<class T>
 Array<T>::Array(int length)
 {
-    //p = (T*) malloc(sizeof(T) * (length + 1));
     p = (T*) ::operator new(sizeof(T) * (length + 1));
     size = length;
 }
@@ -11,7 +10,6 @@ Array<T>::Array(int length)
 template<class T>
 Array<T>::~Array()
 {
-    //free(p);
     delete p;
 }
 
